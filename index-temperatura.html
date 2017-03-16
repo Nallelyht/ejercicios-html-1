@@ -22,16 +22,17 @@
     </tr>
   </table>
   </div>
-      <script>function convert (grado){
+      <script>
+        function convert (grado){
         var temperatura;
         if(grado == 'C'){
           temperatura = document.getElementById('C').value * 1.8 + 32;
           document.getElementById('F').value = Math.round(temperatura);
-        } else {
-          temperatura = document.getElementById('C').value / 1.8 - 32;
-          document.getElementById('F').value = Math.round(temperatura);
+          } else {
+            temperatura = document.getElementById('F').value / 1.8 - 32;
+            document.getElementById('C').value = Math.round(temperatura);
+          }
         }
-      }
       </script>
  </body>
 </html>
