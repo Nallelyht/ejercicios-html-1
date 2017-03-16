@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Convertidor de temperatura</title>
+ </head>
+ <body>
+   <div align = "center">
+     <h1>Convertir grados Celsius a Fahrenheit</h1>
+   </div>
+   <div align="center">
+   <table border="1">
+     <tr>
+       <td>Fahrenheit</td>
+       <td><input type="number"  name="Fahrenheit" id="fahrenheit"></td>
+       <td><button type="button" onclick="convertirCelius(),return true">Convertir a Celsius</button></td>
+     </tr>
+     <tr>
+       <td>Celisus</td>
+       <td><input type="number"  name="Celsius"></td>
+       <td><button type="button" onclick="convertirFahreheit(),return false">Converir a Fahrenheit</button></td>
+     </tr>
+   </table>
+   </div>
+   <script type="text/javascript" >
+   function convertirCelsius(fahrenheit) {
+     var cuantosGrados = 0;
+     cuantosGrados = (fahrenheit/1.8)-32;
+     return cuantosGrados;
+   }
+   convertirCelsius(fahrenheit);
+
+   function convertirFahrenheit(celsius) {
+     var cuantosGrados = 0;
+     cuantosGrados = (celsius*1.8)+32;
+     return cuantosGrados;
+   }
+   convertirFahrenheit();
+   </script>
+ </body>
+</html>
