@@ -6,37 +6,32 @@
  </head>
  <body>
    <div align = "center">
-     <h1>Convertir grados Celsius a Fahrenheit</h1>
-   </div>
-   <div align="center">
-   <table border="1">
-     <tr>
-       
-       <td>Fahrenheit</td>
-       <td><input type="number"  name="Fahrenheit" id="fahrenheit"></td>
-       <td><button type="button" onclick="convertirCelius(),return true">Convertir a Celsius</button></td>
-     </tr>
-     <tr>
-       <td>Celisus</td>
-       <td><input type="number"  name="Celsius"></td>
-       <td><button type="button" onclick="convertirFahreheit(),return false">Converir a Fahrenheit</button></td>
-     </tr>
-   </table>
-   </div>
-   <script type="text/javascript" >
-   function convertirCelsius(fahrenheit) {
-     var cuantosGrados = 0;
-     cuantosGrados = (fahrenheit/1.8)-32;
-     return cuantosGrados;
-   }
-   convertirCelsius(fahrenheit);
-
-   function convertirFahrenheit(celsius) {
-     var cuantosGrados = 0;
-     cuantosGrados = (celsius*1.8)+32;
-     return cuantosGrados;
-   }
-   convertirFahrenheit();
-   </script>
+    <h1>Convertir grados Celsius a Fahrenheit</h1>
+  </div>
+  <div align="center">
+  <table border="1">
+    <tr>
+      <td>Fahrenheit</td>
+      <td><input type="number"  name="Fahrenheit" id="C"></td>
+      <td><button type="button" value="" onclick="convert('C')">Convertir a Celsius</button></td>
+    </tr>
+    <tr>
+      <td>Celisus</td>
+      <td><input type="number"  name="Celsius" id="F"></td>
+      <td><button type="button" onclick="convert('F')">Convertir Fahrenheit</button></td>
+    </tr>
+  </table>
+  </div>
+      <script>function convert (grado){
+        var temperatura;
+        if(grado == 'C'){
+          temperatura = document.getElementById('C').value * 1.8 + 32;
+          document.getElementById('F').value = Math.round(temperatura);
+        } else {
+          temperatura = document.getElementById('C').value / 1.8 - 32;
+          document.getElementById('F').value = Math.round(temperatura);
+        }
+      }
+      </script>
  </body>
 </html>
